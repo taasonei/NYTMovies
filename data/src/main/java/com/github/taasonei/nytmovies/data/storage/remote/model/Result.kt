@@ -1,4 +1,4 @@
-package com.github.taasonei.nytmovies.data.remote.model
+package com.github.taasonei.nytmovies.data.storage.remote.model
 
 data class Result(
     val display_title: String,

@@ -1,7 +1,7 @@
-package com.github.taasonei.nytmovies.data.remote
+package com.github.taasonei.nytmovies.data.storage.remote
 
 import android.util.Log
-import com.github.taasonei.nytmovies.data.remote.model.RemoteMovie
+import com.github.taasonei.nytmovies.data.storage.remote.model.RemoteMovie
 
 class RemoteMovieDataSourceImpl(private val movieApi: MovieApi) : RemoteMovieDataSource {
 

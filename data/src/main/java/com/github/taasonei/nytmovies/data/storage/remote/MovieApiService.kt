@@ -1,6 +1,6 @@
-package com.github.taasonei.nytmovies.data.remote
+package com.github.taasonei.nytmovies.data.storage.remote
 
-import com.github.taasonei.nytmovies.data.remote.model.Reviews
+import com.github.taasonei.nytmovies.data.storage.remote.model.Reviews
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
