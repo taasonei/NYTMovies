@@ -9,5 +9,8 @@ class LocalMovieDataSourceImpl(private val database: MovieRoomDatabase) : LocalM
         return database.movieDao().getMovies()
     }
 
-}
+    override suspend fun insertMovies(movies: List<DatabaseMovie>) {
+        database.movieDao().insertMovies(movies)
+    }
 
+}

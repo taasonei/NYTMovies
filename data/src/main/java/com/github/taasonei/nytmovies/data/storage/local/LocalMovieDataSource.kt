@@ -7,4 +7,6 @@ interface LocalMovieDataSource {
 
     fun getMovies(): Flow<List<DatabaseMovie>>
 
+    suspend fun insertMovies(movies: List<DatabaseMovie>)
+
 }

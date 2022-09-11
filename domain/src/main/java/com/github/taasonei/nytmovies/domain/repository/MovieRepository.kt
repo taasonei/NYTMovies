@@ -7,4 +7,6 @@ interface MovieRepository {
 
     fun getMovies(): Flow<List<Movie>>
 
+    suspend fun loadAndSaveMovies()
+
 }
