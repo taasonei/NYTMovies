@@ -22,7 +22,7 @@ class MovieListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val adapter = MovieAdapter()
-        binding.recyclerView.adapter = MovieAdapter()
+        binding.recyclerView.adapter = adapter
 
         lifecycle.coroutineScope.launch {
             viewModel.movieList.collect { list ->
