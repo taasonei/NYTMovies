@@ -1,9 +1,12 @@
 package com.github.taasonei.nytmovies.data.storage.local
 
 import android.content.Context
+import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.github.taasonei.nytmovies.data.storage.local.model.DatabaseMovie
 
+@Database(entities = [DatabaseMovie::class], version = 1)
 abstract class MovieRoomDatabase : RoomDatabase() {
 
     abstract fun movieDao(): MovieDao
