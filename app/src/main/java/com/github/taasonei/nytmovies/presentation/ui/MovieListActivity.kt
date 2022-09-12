@@ -3,6 +3,7 @@ package com.github.taasonei.nytmovies.presentation.ui
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.coroutineScope
 import com.github.taasonei.nytmovies.databinding.ActivityMovieListBinding
 import com.github.taasonei.nytmovies.presentation.adapter.MovieAdapter
@@ -16,6 +17,7 @@ class MovieListActivity : AppCompatActivity() {
     private val viewModel: MovieListViewModel by viewModels { MovieListViewModelFactory(applicationContext) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
 
         binding = ActivityMovieListBinding.inflate(layoutInflater)
