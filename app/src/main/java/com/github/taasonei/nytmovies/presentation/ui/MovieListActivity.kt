@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.coroutineScope
+import androidx.recyclerview.widget.RecyclerView.Adapter.StateRestorationPolicy
 import com.github.taasonei.nytmovies.app.App
 import com.github.taasonei.nytmovies.databinding.ActivityMovieListBinding
 import com.github.taasonei.nytmovies.presentation.adapter.MovieAdapter
@@ -32,6 +33,7 @@ class MovieListActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, factory).get(MovieListViewModel::class.java)
 
         val adapter = MovieAdapter()
+        adapter.stateRestorationPolicy = StateRestorationPolicy.PREVENT_WHEN_EMPTY
         binding.recyclerView.adapter = adapter
 
         lifecycle.coroutineScope.launch {

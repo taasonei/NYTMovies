@@ -1,5 +1,6 @@
 package com.github.taasonei.nytmovies.presentation.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.taasonei.nytmovies.domain.GetMoviesUseCase
@@ -18,7 +19,11 @@ class MovieListViewModel(
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            loadAndSaveMoviesUseCase.execute()
+            try {
+                loadAndSaveMoviesUseCase.execute()
+            } catch (e: Exception) {
+                Log.e("$this@MovieListViewModel", e.stackTraceToString())
+            }
         }
     }
 
